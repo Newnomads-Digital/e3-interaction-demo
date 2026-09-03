@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="E3 сурагчдад зориулсан HTML, CSS interaction demo.">
+    <title>E3 Interaction Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet">
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-motion-target="scroll-progress-anchor">
+      <nav class="navbar container" aria-label="Үндсэн цэс">
+        <a class="brand" href="#top" aria-label="Tesla нүүр хуудас">
+          <img src="assets/logo.png" alt="Tesla" width="106" height="14">
+        </a>
+        <div class="nav-links">
+          <a href="#vehicles">Vehicles</a>
+          <a href="#energy">Energy</a>
+          <a href="#charging">Charging</a>
+          <a href="#discover">Discover</a>
+          <a href="#shop">Shop</a>
+        </div>
+        <div class="nav-action">
+          <a
+            class="button button-primary button-small"
+            href="#test-drive"
+            data-motion-target="magnetic-button"
+            >Жолоодож үзэх</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="section-image"
+          src="assets/hero.png"
+          alt="Цөлийн зам дээрх мөнгөлөг Model 3">
+        <div class="hero-content container">
+          <div class="hero-copy" data-motion-target="staggered-text-reveal">
+            <h1 id="hero-title">Model 3</h1>
+            <p>1.99% APR Available</p>
+          </div>
+          <div class="button-row">
+            <a
+              class="button button-primary"
+              href="#order"
+              data-motion-target="seamless-button-loading"
+              >Одоо захиалах</a
+            >
+            <a class="button button-light" href="#vehicles">Дэлгэрэнгүй үзэх</a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="discover"
+        aria-labelledby="self-driving-title"
+      >
+        <div class="container">
+          <article class="split-feature">
+            <div class="split-feature-copy">
+              <div>
+                <h2 id="self-driving-title">Full Self-Driving (Supervised)</h2>
+                <p class="lead">
+                  Makes every drive easier. Subscribe for $99/mo.<sup>1</sup>
+                </p>
+              </div>
+              <dl class="feature-stats">
+                <div>
+                  <dt>7x</dt>
+                  <dd>Fewer Collisions</dd>
+                </div>
+                <div>
+                  <dt>13,534,294,722</dt>
+                  <dd>Miles Driven</dd>
+                </div>
+              </dl>
+              <div class="button-row">
+                <a
+                  class="button button-dark"
+                  id="test-drive"
+                  href="#order"
+                  data-motion-target="seamless-button-loading"
+                  >Жолоодож үзэх цаг авах</a
+                >
+                <a class="button button-light" href="#charging">Дэлгэрэнгүй</a>
+              </div>
+            </div>
+            <div class="split-feature-media">
+              <img
+                src="assets/self-driving.png"
+                alt="Tesla Full Self-Driving дэлгэцийн харагдац">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section product-section"
+        id="vehicles"
+        aria-label="Tesla загварууд"
+      >
+        <div class="container">
+          <div class="product-viewport">
+            <div class="product-track">
+              <article
+                class="media-card product-card"
+                data-motion-target="3d-tilt-card spotlight-hover"
+              >
+                <img src="assets/model-y-l.png" alt="Model Y L Premium">
+                <div class="media-card-shade"></div>
+                <div class="media-card-content">
+                  <div data-motion-target="staggered-text-reveal">
+                    <p class="eyebrow">Long Wheelbase Midsize SUV</p>
+                    <h2>Model Y L Premium</h2>
+                  </div>
+                  <div>
+                    <p class="price">Starting at $61,990</p>
+                    <div class="button-row">
+                      <a class="button button-primary" href="#order"
+                        >Одоо захиалах</a
+                      ><a class="button button-light" href="#discover"
+                        >Дэлгэрэнгүй</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="media-card product-card"
+                data-motion-target="3d-tilt-card spotlight-hover"
+              >
+                <img src="assets/model-3.png" alt="Model 3">
+                <div class="media-card-shade"></div>
+                <div class="media-card-content">
+                  <div data-motion-target="staggered-text-reveal">
+                    <p class="eyebrow">Sport Sedan</p>
+                    <h2>Model 3</h2>
+                  </div>
+                  <div>
+                    <p class="price">Lease From $419/mo</p>
+                    <div class="button-row">
+                      <a class="button button-primary" href="#order"
+                        >Одоо захиалах</a
+                      ><a class="button button-light" href="#discover"
+                        >Дэлгэрэнгүй</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="media-card product-card"
+                data-motion-target="3d-tilt-card spotlight-hover"
+              >
+                <img src="assets/model-y.png" alt="Model Y">
+                <div class="media-card-shade"></div>
+                <div class="media-card-content">
+                  <div data-motion-target="staggered-text-reveal">
+                    <p class="eyebrow">Midsize SUV</p>
+                    <h2>Model Y</h2>
+                  </div>
+                  <div>
+                    <p class="price">Lease From $499/mo</p>
+                    <div class="button-row">
+                      <a class="button button-primary" href="#order"
+                        >Одоо захиалах</a
+                      ><a class="button button-light" href="#discover"
+                        >Дэлгэрэнгүй</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="slider-controls" aria-hidden="true">
+            <img
+              class="slider-dots vehicle-dots"
+              src="assets/slider-dots.svg"
+              alt="">
+            <div class="slider-arrows">
+              <span class="icon-button"
+                ><img src="assets/arrow-back.svg" alt=""></span
+              ><span class="icon-button"
+                ><img src="assets/arrow-forward.svg" alt=""></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section info-section"
+        id="shop"
+        aria-label="Санал болон бэлэн автомашинууд"
+      >
+        <div class="container info-grid">
+          <article class="info-card" data-motion-target="spotlight-hover">
+            <div class="info-card-copy">
+              <div>
+                <h3>Current Offers</h3>
+                <p>Explore limited-time offers on Tesla vehicles.</p>
+              </div>
+              <a class="button button-light" href="#order">Дэлгэрэнгүй</a>
+            </div>
+            <div class="info-card-media">
+              <img
+                src="assets/current-offers.png"
+                alt="Tesla-н одоогийн хямдралтай загварууд">
+            </div>
+          </article>
+          <article class="info-card" data-motion-target="spotlight-hover">
+            <div class="info-card-copy">
+              <div>
+                <h3>Inventory</h3>
+                <p>
+                  Find new and Certified Pre-Owned Tesla vehicles available
+                  immediately.
+                </p>
+              </div>
+              <div
+                class="inventory-tabs"
+                data-motion-target="morphing-tabs-shared-layout"
+              >
+                <button class="button button-light is-active" type="button">
+                  New</button
+                ><button class="button button-light" type="button">
+                  Pre-Owned
+                </button>
+              </div>
+            </div>
+            <div class="info-card-media">
+              <img
+                src="assets/inventory.png"
+                alt="Tesla-н бэлэн автомашины inventory">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="section map-section"
+        id="charging"
+        aria-label="Tesla цэнэглэгчийн газрын зураг"
+      >
+        <div class="container">
+          <img
+            src="assets/charger-map.png"
+            alt="Tesla Supercharger болон Destination Charger газрын зураг">
+        </div>
+      </section>
+
+      <section class="charge-section" aria-labelledby="charge-title">
+        <div class="container charge-layout">
+          <div class="charge-copy">
+            <div>
+              <h2 id="charge-title">Find Your Charge</h2>
+              <p class="lead">
+                View the network of Tesla Superchargers and Destination Chargers
+                available near you.
+              </p>
+            </div>
+            <div class="button-row">
+              <a class="button button-dark" href="#charging">View Network</a
+              ><a class="button button-light" href="#discover">Дэлгэрэнгүй</a>
+            </div>
+          </div>
+          <dl class="charge-stats">
+            <div>
+              <dt>
+                <span>38,490</span
+                ><img src="assets/supercharger-icon.svg" alt="">
+              </dt>
+              <dd>Superchargers</dd>
+            </div>
+            <div>
+              <dt>
+                <span>410</span><img src="assets/destination-icon.svg" alt="">
+              </dt>
+              <dd>Destination Chargers</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section
+        class="section product-section"
+        id="energy"
+        aria-label="Гэрийн эрчим хүч"
+      >
+        <div class="container">
+          <div class="product-viewport">
+            <div class="product-track energy-track">
+              <article
+                class="media-card product-card"
+                data-motion-target="3d-tilt-card spotlight-hover"
+              >
+                <img src="assets/solar-panels.png" alt="Tesla Solar Panels">
+                <div class="media-card-shade"></div>
+                <div class="media-card-content compact">
+                  <h2 data-motion-target="staggered-text-reveal">
+                    Solar Panels
+                  </h2>
+                  <div>
+                    <p class="price">
+                      Power Your Home and Reduce Your Electricity Bill
+                    </p>
+                    <div class="button-row">
+                      <a class="button button-primary" href="#order"
+                        >Одоо захиалах</a
+                      ><a class="button button-light" href="#discover"
+                        >Дэлгэрэнгүй</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="media-card product-card"
+                data-motion-target="3d-tilt-card spotlight-hover"
+              >
+                <img src="assets/powerwall.png" alt="Tesla Powerwall">
+                <div class="media-card-shade"></div>
+                <div class="media-card-content compact">
+                  <h2 data-motion-target="staggered-text-reveal">Powerwall</h2>
+                  <div>
+                    <p class="price">Keep Your Lights On During Outages</p>
+                    <div class="button-row">
+                      <a class="button button-primary" href="#order"
+                        >Одоо захиалах</a
+                      ><a class="button button-light" href="#discover"
+                        >Дэлгэрэнгүй</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="slider-controls" aria-hidden="true">
+            <img class="slider-dots" src="assets/slider-dots-alt.svg" alt="">
+            <div class="slider-arrows">
+              <span class="icon-button"
+                ><img src="assets/arrow-back.svg" alt=""></span
+              ><span class="icon-button"
+                ><img src="assets/arrow-forward.svg" alt=""></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <img
+          class="footer-divider"
+          src="assets/divider.svg"
+          alt=""
+          aria-hidden="true">
+        <nav aria-label="Footer цэс">
+          <a href="#top">Tesla © 2026</a><a href="#privacy">Privacy policy</a
+          ><a href="#recalls">Vehicle Recalls</a><a href="#contact">Contacts</a
+          ><a href="#news">News</a><a href="#updates">Get Updates</a
+          ><a href="#locations">Locations</a><a href="#learn">Learn</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
