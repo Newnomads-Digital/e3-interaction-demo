@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AiWeb Interaction Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 720px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      #chat {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        min-height: 260px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .message {
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+      }
+
+      .user strong {
+        color: #084298;
+      }
+
+      .assistant strong {
+        color: #146c43;
+      }
+
+      form {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      input[type="text"] {
+        flex: 1;
+        padding: 0.5rem;
+      }
+
+      button {
+        padding: 0.5rem 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AiWeb Interaction Demo</h1>
+    <p>Type a message and get a simulated AI response.</p>
+
+    <div id="chat" aria-live="polite"></div>
+
+    <form id="chat-form">
+      <input
+        id="prompt"
+        type="text"
+        name="prompt"
+        placeholder="Ask something..."
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("chat-form");
+      const chat = document.getElementById("chat");
+      const promptInput = document.getElementById("prompt");
+
+      function addMessage(role, text) {
+        const item = document.createElement("div");
+        item.className = `message ${role}`;
+        item.innerHTML = `<strong>${role === "user" ? "You" : "AiWeb"}:</strong> ${text}`;
+        chat.appendChild(item);
+      }
+
+      function createAiResponse(input) {
+        return `Thanks for your message. You said: "${input}". This is a demo AiWeb response.`;
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const value = promptInput.value.trim();
+        if (!value) return;
+
+        addMessage("user", value);
+        addMessage("assistant", createAiResponse(value));
+        promptInput.value = "";
+        promptInput.focus();
+      });
+    </script>
+  </body>
+</html>
